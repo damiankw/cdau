@@ -3,7 +3,7 @@
 The tool includes optional password protection to prevent unauthorized access to your directory structure.
 
 ### Setting Up Password Protection
-1. Open the `du.php` file in a text editor
+1. Open the `cdua.php` file in a text editor
 2. Find the line: `define('APP_PASSWORD', '');`
 3. Change the empty string to your desired password: `define('APP_PASSWORD', 'your_secure_password');`
 4. Save the file and upload to your server
@@ -70,7 +70,7 @@ Add to your crontab for automated reports:
 The tool includes optional password protection to prevent unauthorized access to your directory structure.
 
 ### Setting Up Password Protection
-1. Open the `du.php` file in a text editor
+1. Open the `cdua.php` file in a text editor
 2. Find the line: `define('APP_PASSWORD', '');`
 3. Change the empty string to your desired password: `define('APP_PASSWORD', 'your_secure_password');`
 4. Save the file and upload to your server
@@ -99,9 +99,9 @@ To disable password protection completely:
 
 ## �🚀 Quick Start
 
-1. **Download** the `du.php` file
+1. **Download** the `cdua.php` file
 2. **Upload** it to any directory in your cPanel account
-3. **Access** it via your browser: `https://yourdomain.com/du.php`
+3. **Access** it via your browser: `https://yourdomain.com/cdua.php`
 4. **Done!** Start exploring your disk usage
 
 ## 📦 Deployment Instructions
@@ -110,18 +110,18 @@ To disable password protection completely:
 1. Log into your cPanel account
 2. Open "File Manager"
 3. Navigate to where you want to place the tool (e.g., `public_html`)
-4. Click "Upload" and select the `du.php` file
-5. Access via `https://yourdomain.com/du.php`
+4. Click "Upload" and select the `cdua.php` file
+5. Access via `https://yourdomain.com/cdua.php`
 
 ### Method 2: FTP/SFTP
 1. Connect to your hosting account via FTP
-2. Upload `du.php` to your desired directory
+2. Upload `cdua.php` to your desired directory
 3. Set file permissions to 644 (if needed)
 4. Access via your browser
 
 ### Method 3: Any Subdirectory
-- Upload to `public_html/tools/du.php` → Access: `yourdomain.com/tools/du.php`
-- Upload to `public_html/admin/du.php` → Access: `yourdomain.com/admin/du.php`
+- Upload to `public_html/tools/cdua.php` → Access: `yourdomain.com/tools/cdua.php`
+- Upload to `public_html/admin/cdua.php` → Access: `yourdomain.com/admin/cdua.php`
 - Works in any web-accessible directory!
 
 ## ✨ Features
