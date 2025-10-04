@@ -1,4 +1,67 @@
-# cPanel Directory Usage Analyzer
+# cP## 🔐 Security & Password Protection
+
+The tool includes optional password protection to prevent unauthorized access to your directory structure.
+
+### Setting Up Password Protection
+1. Open the `du.php` file in a text editor
+2. Find the line: `define('APP_PASSWORD', '');`
+3. Change the empty string to your desired password: `define('APP_PASSWORD', 'your_secure_password');`
+4. Save the file and upload to your server
+
+### Setting Up Email Reports (Optional - Command Line Only)
+For automated email reports when using command line mode:
+1. Find the line: `define('APP_EMAIL', '');`
+2. Change to your email address: `define('APP_EMAIL', 'your@email.com');`
+3. This is only used when running from command line
+4. Web interface does not require email configuration
+
+### Security Enforcement
+- **⚠️ Empty Password Protection:** If `APP_PASSWORD` is left empty (`''`), the tool will show a security warning and refuse to run
+- **Mandatory Configuration:** You must set a password before the tool can be used
+- **No Bypass:** The security check cannot be bypassed - a password must be configured
+
+### Default Password
+- **Default password:** Empty (`''`) - **must be changed before use**
+- **Security Warning:** Tool will not function until password is set
+
+## 💻 Command Line Usage
+
+The tool can also be run from the command line for automated reporting and cron jobs.
+
+### Basic Command Line Usage
+```bash
+php -f cdua.php
+```
+
+### Setting Up Cron Jobs
+Add to your crontab for automated reports:
+
+```bash
+# Daily report at 6 AM
+0 6 * * * /usr/bin/php -f /path/to/cdua.php
+
+# Weekly report every Sunday at midnight
+0 0 * * 0 /usr/bin/php -f /path/to/cdua.php
+
+# Monthly report on the 1st at 3 AM
+0 3 1 * * /usr/bin/php -f /path/to/cdua.php
+```
+
+### Command Line Features
+- **Console Output:** Displays top 20 largest directories/files
+- **Summary Statistics:** Shows breakdown by file type
+- **Email Reports:** Automatically emails results if `APP_EMAIL` is configured
+- **No Password Required:** Command line mode bypasses web authentication
+- **Cron Friendly:** Perfect for automated monitoring
+
+### Email Configuration
+- **Only needed for command line usage** - web interface doesn't use email
+- Set `APP_EMAIL` to receive automated email reports from command line
+- Leave empty if you only use the web interface
+- Reports include detailed directory analysis
+- Email sent automatically when running from command line
+- **Uses PHP's built-in `mail()` function** - requires proper PHP mail configuration on server
+- **Note:** Many shared hosting providers have mail() disabled or require additional SMTP setupge Analyzer
 
 **A single-file PHP disk usage analyzer for cPanel hosting accounts.**
 
