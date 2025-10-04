@@ -22,7 +22,7 @@ ini_set('memory_limit', '256M');
 define('APP_NAME', 'cPanel Directory Usage Analyzer');
 define('APP_VERSION', '2.0.0');
 define('MAX_DEPTH', 100); // Prevent infinite recursion
-define('APP_PASSWORD', 'asd'); // Change this password for security
+define('APP_PASSWORD', ''); // Change this password for security
 define('APP_EMAIL', ''); // Email address for command line reports (optional)
 
 // ============================================================================
